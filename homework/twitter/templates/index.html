@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StartPage</title>
+</head>
+<body>
+<div style="text-align: center; font-size: 30px; margin-top: 5em;">
+<form method="post">
+    {% csrf_token %}
+    <label>Login</label><br>
+    <input type="text" style="line-height: 30px" name="login" required><br>
+    <label>Password</label><br>
+    <input type="password" style="line-height: 30px" name="password" required><br>
+    <input type="submit" value="Submit" style="padding: 10px; margin-top: 2em;">
+</form>
+    <p>Do not have an account yet?</p>
+    <a href="{% url 'sign_up' %}">Sign Up</a>
+</div>
+</body>
+</html>
