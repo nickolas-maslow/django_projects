@@ -8,17 +8,24 @@
 </head>
 <body style="background-color: black; color: white;">
 
-	<div class="container-fluid text-center bg-dark p-3">
-		<a href="#" type="button" class="btn btn-outline-primary">Sign In</a>
-		<a href="#" type="button" class="btn btn-outline-primary mx-3">Sign Up</a>
+<div class="container-fluid bg-dark p-3 sticky-top">
+	<div class="row">
+	<a href="#" type="button" class="btn btn-outline-primary col">Profile</a>
+	<a href="#" type="button" class="btn btn-outline-primary col mx-3">Home</a>
+	<a href="#" type="button" class="btn btn-outline-primary col mx-3">Wall</a>
+	<div class="input-group col">
+  		<input type="search" class="form-control rounded bg-dark text-white" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  		<button type="button" class="btn btn-outline-warning mx-1 rounded-3">search</button>
 	</div>
+	</div>
+</div>
 
-	<div style="margin-left: 35%;">
+<div style="margin-left: 35%;">
 
 	<div class="card bg-dark" style="width: 32rem; padding: 1em; margin-top: 1em; margin-bottom: 1em;">
 	  <div class="card-body">
 	  	<a href="#" class="fw-bold">User</a>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	    <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <img src="https://picsum.photos/300/300" class="rounded-3">
       <div class="row" style="margin-top: 1em;">
@@ -28,8 +35,5 @@
       	<a type="button" class="btn btn-primary col" style="margin-left:5px;">Repost</a>
       </div>
 	</div>
-
-	</div>
-
 </body>
 </html>
