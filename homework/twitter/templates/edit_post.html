@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.min.css">
-	<title>{{ title }}</title>
-</head>
-<body style="background-color: black; color: white;">
-
-<div class="bg-dark p-3 text-center">
-	<a href="#" type="link" class="btn btn-outline-primary">Home</a>
-	<a href="#" type="link" class="btn btn-outline-primary">Profile</a>
-</div>
+{% extends 'base.html' %}
+{% block title %}
+    Editing the post
+{% endblock %}
+{% block content %}
+    <a href="{% url 'my_profile' %}" type="button" class="btn btn-primary m-3">Return back</a>
 
 	<div class="container bg-dark p-3" style="width: 500px; margin-top: 3em;">
 
@@ -19,9 +11,8 @@
   	<textarea class="form-control bg-dark text-white" id="exampleFormControlTextarea1" rows="10"></textarea>
   	<button type="button" class="btn btn-outline-primary mt-3">Commit</button><br>
   	<label for="exampleFormControlInput1" class="form-label mt-3">Change post photo</label>
-	<input class="form-control bg-" type="file" id="formFile">
+	<input class="form-control" type="file" id="formFile">
 	<button type="button" class="btn btn-outline-primary mt-3">Commit</button>
 
 	</div>
-</body>
-</html>
+{% endblock %}

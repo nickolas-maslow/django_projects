@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.min.css">
-	<title>{{ title }}</title>
-</head>
-<body style="background-color: black; color: white;">
+{% extends 'base.html' %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
 
 <div class="container-fluid bg-dark p-3 sticky-top">
 	<div class="row">
-	<a href="#" type="button" class="btn btn-outline-primary col">Profile</a>
-	<a href="#" type="button" class="btn btn-outline-primary col mx-3">Home</a>
-	<a href="#" type="button" class="btn btn-outline-primary col mx-3">Wall</a>
+	<a href="{% url 'my_profile' %}" type="button" class="btn btn-outline-primary col">Profile</a>
+	<a href="{% url 'logged_homepage' %}" type="button" class="btn btn-outline-primary col mx-3">Home</a>
+	<a href="{% url 'my_profile' %}" type="button" class="btn btn-outline-primary col mx-3">Wall</a>
 	<div class="input-group col">
   		<input type="search" class="form-control rounded bg-dark text-white" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
   		<button type="button" class="btn btn-outline-warning mx-1 rounded-3">search</button>
@@ -24,16 +22,16 @@
 
 	<div class="card bg-dark" style="width: 32rem; padding: 1em; margin-top: 1em; margin-bottom: 1em;">
 	  <div class="card-body">
-	  	<a href="#" class="fw-bold">User</a>
+	  	<a href="{% url 'user_profile' %}" class="fw-bold">User</a>
 	    <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <img src="https://picsum.photos/300/300" class="rounded-3">
       <div class="row" style="margin-top: 1em;">
       	<a type="button" class="btn btn-success col">Like</a>
       	<a type="button" class="btn btn-danger col" style="margin-left:5px;">Dislike</a>
-      	<a type="button" class="btn btn-secondary col" style="margin-left:5px;">Comment</a>
+      	<a href="{% url 'comment' %}" type="button" class="btn btn-secondary col" style="margin-left:5px;">Comment</a>
       	<a type="button" class="btn btn-primary col" style="margin-left:5px;">Repost</a>
       </div>
 	</div>
-</body>
-</html>
+</div>
+{% endblock %}

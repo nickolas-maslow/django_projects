@@ -1,36 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.min.css">
-	<title>{{ title }}</title>
-</head>
-<body style="background-color: black; color: rosybrown;">
+{% extends 'base.html' %}
+{% block title %}
+    Sign Up
+{% endblock %}
+{% block content %}
+
+  <a href="{% url 'not_logged_homepage' %}" type="button" class="btn btn-primary m-3">Return back</a>
+
 	<div class="text-center container" style="margin-top: 5em;">
 	<form class="bg-dark p-3"> 
     <h1 class="h3 mb-3 fw-normal">Sign up</h1>
     <div class="form-floating">
-      <input type="email" class="form-control w-30" id="floatingInput" placeholder="Email address">
+      <input type="email" class="form-control w-30" id="floatingInput" placeholder="Email address" name="login">
       <label for="floatingInput">Email address</label>
     </div>
     <div class="form-floating mt-3">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="firstpassword">
       <label for="floatingPassword">Password</label>
     </div>
 
-    <div class="form-floating mt-3">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Repeat the password">
+    <div class="form-floating mt-3 mb-3">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Repeat the password" name="secondpassword">
       <label for="floatingPassword">Repeat the password</label>
     </div>
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+    <button onclick="{{ add_user }}" class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
   </form>
 </div>
-</body>
-</html>
+
+{% endblock %}

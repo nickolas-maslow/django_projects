@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 {% block title %}
-    My profile
+    Username
 {% endblock %}
-
 {% block content %}
 
 	<div class="card mt-5 bg-dark" style="margin-left: 5%; margin-right: 5%;">
   		<div class="card-body">
   			<div class="row" style="width: 500px">
   				<div class="col">
-  					<a href="{% url 'logged_homepage' %}" class="btn btn-outline-primary">Home</a><br>
+  					<a href="{% url 'logged_homepage' %}" class="btn btn-outline-primary">Return back</a><br>
   				</div>
   				<div class="col" style="width: 150px">
   					<img src="https://picsum.photos/150/150" class="rounded-circle" alt="photo">
@@ -17,25 +16,26 @@
     			<div class="col">
     				<p class="fw-bold">Login</p>
     				<p class="text-muted">Joined time</p>
-    				<a href="{% url 'my_following' %}">Following</a>
-    				<a href="{% url 'my_followers' %}">Followers</a>
-    				<a href="{% url 'edit_profile' %}" type="button" class="btn btn-outline-primary mt-3">Edit</a>
-    				<a type="submit" class="btn btn-outline-danger mt-3">Log out</a>
+    				<a href="{% url 'user_followings' %}">Following</a>
+    				<a href="{% url 'user_followers' %}">Followers</a>
+    				<button type="button" class="btn btn-outline-primary mt-3">Follow</button>
     			</div>
     		</div>
   		</div>	
 	</div>
 
 	<div style="margin-left: 35%;">
-		<p class="fw-bold fs-2">My posts</p>
+		<p class="fw-bold fs-2">User's posts</p>
 	<div class="card bg-dark" style="width: 32rem; padding: 1em; margin-top: 1em; margin-bottom: 1em;">
 	  <div class="card-body">
 	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <img src="https://picsum.photos/300/300" class="rounded-3" alt="photo">
       <div class="row" style="margin-top: 1em;">
-      	<a href="{% url 'edit_post' %}" type="button" class="btn btn-outline-primary">Edit</a>
-      	<a type="button" class="btn btn-outline-danger mt-3">Delete</a>
+      	<a type="button" class="btn btn-success col">Like</a>
+      	<a type="button" class="btn btn-danger col" style="margin-left:5px;">Dislike</a>
+      	<a type="button" class="btn btn-secondary col" style="margin-left:5px;">Comment</a>
+      	<a type="button" class="btn btn-primary col" style="margin-left:5px;">Repost</a>
       </div>
 	</div>
 

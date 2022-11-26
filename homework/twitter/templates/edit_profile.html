@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.min.css">
-	<title>{{ title }}</title>
-</head>
-<body style="background-color: black; color: white;">
+{% extends 'base.html' %}
+{% block title %}
+    Editing your profile
+{% endblock %}
+{% block content %}
 
-<div class="bg-dark p-3 text-center">
-	<a href="#" type="link" class="btn btn-outline-primary">Home</a>
-	<a href="#" type="link" class="btn btn-outline-primary">Profile</a>
-</div>
+	<a href="{% url 'my_profile' %}" type="button" class="btn btn-primary m-3">Return back</a>
 
 <div class="container bg-dark p-3" style="width: 500px; margin-top: 3em;">
 	<div class="row">
@@ -34,5 +27,4 @@
 	</div>
 </div>
 </div>
-</body>
-</html>
+{% endblock %}
