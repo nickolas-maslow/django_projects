@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete profession</title>
+</head>
+<body>
+<h1>Delete a job</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="job">Job:</label><br>
+    <input type="text" name="job"><br>
+    <button type="submit">Delete</button>
+    <a href="{% url 'main' %}">Home</a>
+</form>
+</body>
+</html>

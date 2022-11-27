@@ -5,11 +5,21 @@
     <title>Professions</title>
 </head>
 <body>
-    {% for job in job%}
-        <p>Job: {{ job.name }}</p>
-        <p>Description: {{ job.description }}</p>
-        <p>Job category: {{ job.type_of_job }}</p>
-    {% endfor %}
-
+    <table border="1" style="padding: 5px;">
+        <tr>
+            <th>Job</th>
+            <th>Description</th>
+            <th>Category</th>
+        </tr>
+        {% for job in job %}
+            <tr>
+                <td>{{ job.name }}</td>
+                <td>{{ job.description }}</td>
+                <td>{{ job.type_of_job }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+<a href="{% url 'add_job' %}">Add profession</a>
+<a href="{% url 'delete_job' %}">Delete profession</a>
 </body>
 </html>

@@ -3,8 +3,8 @@
   <component name="FacetManager">
     <facet type="django" name="Django">
       <configuration>
-        <option name="rootFolder" value="$MODULE_DIR$/twitter" />
-        <option name="settingsModule" value="twitter/settings.py" />
+        <option name="rootFolder" value="$MODULE_DIR$/city_statictics" />
+        <option name="settingsModule" value="city_statictics/settings.py" />
         <option name="manageScript" value="manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
         <option name="doNotUseTestRunner" value="false" />
@@ -25,5 +25,10 @@
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/city_statictics/templates" />
+      </list>
+    </option>
   </component>
 </module>

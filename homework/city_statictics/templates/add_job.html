@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add professions</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Job:</label><br>
+    <input type="text" name="name" height="30px"><br>
+    <label for="desc">Description:</label><br>
+    <input type="text" name="desc" height="30px"><br>
+    <label>Category:</label><br>
+    <input type="radio" name="type" height="30px" value="Education">Education<br>
+    <input type="radio" name="type" height="30px" value="MIA">MIA<br>
+    <input type="radio" name="type" height="30px" value="Legal proceedings">Legal proceedings<br>
+    <button type="submit">Commit</button> <a href="{% url 'main' %}">Home</a>
+</form>
+</body>
+</html>
