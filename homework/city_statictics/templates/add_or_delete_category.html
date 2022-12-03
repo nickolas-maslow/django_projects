@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Add or delete category
+{% endblock %}
+{% block content %}
+<ul>
+    {% for category in categories %}
+        <li>
+        {{ category.type }}
+        </li>
+    {% endfor %}
+</ul>
+<form method="post">
+    {% csrf_token %}
+    <label for="add_category">
+        Add category <br>
+    <input type="text" name="add_category" style="line-height: 50px; font-size: 30px"><br>
+    </label>
+    <label for="delete_category">
+        Delete category <br>
+    <input type="text" name="delete_category" style="line-height: 50px; font-size: 30px">
+    </label><br>
+    <button type="submit" style="font-size: 30px;">Commit</button>
+    <a href="{% url 'main' %}">Home</a>
+</form>
+{% endblock %}

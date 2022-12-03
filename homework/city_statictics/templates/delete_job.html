@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Delete profession</title>
-</head>
-<body>
-<h1>Delete a job</h1>
+{%  extends 'base.html' %}
+{% block title %}
+    Delete a job
+{% endblock %}
+{% block content %}
 <form method="post">
     {% csrf_token %}
-    <label for="job">Job:</label><br>
-    <input type="text" name="job"><br>
-    <button type="submit">Delete</button>
+    <label for="job">
+        Delete job <br>
+        <input type="text" name="job" style="line-height: 50px; font-size: 30px">
+        <button type="submit" style="font-size: 30px;">DELETE</button>
+    </label><br>
     <a href="{% url 'main' %}">Home</a>
 </form>
-</body>
-</html>
+{% endblock %}

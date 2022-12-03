@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}
-    Add a job
+    Update job information
 {% endblock %}
 {% block content %}
+
 <form method="post">
     {% csrf_token %}
     <label for="name">Job:</label><br>
@@ -13,8 +14,7 @@
     {% for type in types %}
     <input type="radio" name="type" style="line-height: 50px; font-size: 30px" value="{{ type.type }}">{{ type.type }}<br>
     {% endfor %}
-    <button type="submit" style="font-size: 30px;">Commit</button> <a href="{% url 'main' %}">Home</a> <a href="{% url 'categories' %}">or you can add a category</a>
+    <button type="submit" style="font-size: 30px;">Commit</button> <a href="{% url 'main' %}">Home</a>
 </form>
+
 {% endblock %}
-
-

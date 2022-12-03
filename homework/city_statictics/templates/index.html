@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Professions</title>
-</head>
-<body>
-    <table border="1" style="padding: 5px;">
+{% extends 'base.html' %}
+{% block title %}
+    The Jobs
+{% endblock %}
+{% block content %}
+    <table border="1" style="padding: 5px; display: inline-block; margin-top: 5em;">
         <tr>
             <th>Job</th>
             <th>Description</th>
@@ -19,7 +17,11 @@
             </tr>
         {% endfor %}
     </table>
+    <br>
+<div style="padding-bottom: 5em;">
 <a href="{% url 'add_job' %}">Add profession</a>
 <a href="{% url 'delete_job' %}">Delete profession</a>
-</body>
-</html>
+<a href="{% url 'update_job' %}">Update profession</a>
+<a href="{% url 'categories' %}">Manage categories</a>
+</div>
+{% endblock %}

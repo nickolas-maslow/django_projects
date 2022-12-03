@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+from .models import User
 from .services import add_user
 
 
@@ -11,8 +13,13 @@ def log_in(request):
 
 
 def sign_up(request):
-    context = {'add_user': add_user(user_login=request.POST())}
-    return render(request, 'signup.html', context=context)
+    if request.method == 'POST':
+        login = request.POST.get('login')
+        first_password = request.POST.get('firstpassword')
+        second_password = request.POST.get('secondpassword')
+        return add_user(login, first_password, second_password)
+
+    return render(request, 'signup.html')
 
 
 def write_comment(request):
