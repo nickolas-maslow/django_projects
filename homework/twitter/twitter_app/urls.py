@@ -16,4 +16,5 @@ urlpatterns = [
     path('user_profile/', user_profile, name='user_profile'),
     path('user_followers/', user_followers, name='user_followers'),
     path('user_followings', user_followings, name='user_followings'),
+    url(r'^search/', include('search.urls'),
 ]
